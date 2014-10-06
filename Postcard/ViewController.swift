@@ -29,7 +29,7 @@ class ViewController: UIViewController {     // ta class se klice ViewController
     @IBAction func sendMailButtonPressed(sender: UIButton)
     {
         NSLog("Moj string")
-        
+        //Tu dodam komentar
         messageLabel.hidden = false
         messageLabel.text = enterMessageTextField.text
         messageLabel.textColor = UIColor.redColor()
