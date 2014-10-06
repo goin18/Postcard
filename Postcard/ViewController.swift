@@ -14,6 +14,7 @@ class ViewController: UIViewController {     // ta class se klice ViewController
     @IBOutlet weak var enterNameTextField: UITextField!
     @IBOutlet weak var enterMessageTextField: UITextField!
     @IBOutlet weak var mailButton: UIButton!
+    @IBOutlet weak var nameLabel: UILabel!
     
     //to je funkcija, ki nalizi aplikacijo
     override func viewDidLoad() {
@@ -30,11 +31,21 @@ class ViewController: UIViewController {     // ta class se klice ViewController
     {
         NSLog("Moj string")
         //Tu dodam komentar
+        //Message
         messageLabel.hidden = false
         messageLabel.text = enterMessageTextField.text
         messageLabel.textColor = UIColor.redColor()
         enterMessageTextField.text = ""
         enterMessageTextField.resignFirstResponder()  //funkcija ki skrije tipkovnico
+        
+        
+        //Name
+        nameLabel.hidden = false
+        nameLabel.text = enterNameTextField.text
+        nameLabel.textColor = UIColor.blueColor()
+        enterNameTextField.text = ""
+        enterNameTextField.resignFirstResponder()
+        
         mailButton.setTitle("Mail Sent", forState: UIControlState.Normal)
         
     }
